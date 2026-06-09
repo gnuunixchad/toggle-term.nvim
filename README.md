@@ -38,8 +38,21 @@ require('toggle-term').setup({
 Here are the default keybindings:
 
 ```lua
-vim.keymap.set('n', '<C-t>', ':TermToggle<CR>', { silent = true })
-vim.keymap.set('t', '<C-t>', '<C-\\><C-n>:TermToggle<CR>', { silent = true })
-vim.keymap.set('n', '<leader>tn', ':TermNew<CR>', { silent = true })
-vim.keymap.set('t', '<leader>tn', '<C-\\><C-n>:TermNew<CR>', { silent = true })
+-- toggle and new terminal
+vim.keymap.set('n', '<C-CR>', ':TermToggle<CR>', { silent = true })
+vim.keymap.set('t', '<C-CR>', '<C-\\><C-n>:TermToggle<CR>', { silent = true })
+vim.keymap.set('n', '<C-S-CR>', ':TermNew<CR>', { silent = true })
+vim.keymap.set('t', '<C-S-CR>', '<C-\\><C-n>:TermNew<CR>', { silent = true })
+
+-- escape terminal mode with vi mode shell
+vim.keymap.set('t', '<leader><ESC>', '<C-\\><C-n>', { noremap = true })
+vim.keymap.set('t', '<leader>q', '<C-\\><C-n>:quit!<CR>', { noremap = true })
+vim.keymap.set('t', '<C-q>', '<C-\\><C-n>:quit!<CR>', { noremap = true })
+vim.keymap.set('t', '<C-k>', '<C-\\><C-n>:wincmd k<CR>', { noremap = true })
+
+-- resize
+vim.keymap.set('t', '<C-w>y', '<C-\\><C-n>:vertical resize -2<CR>i', { noremap = true })
+vim.keymap.set('t', '<C-w>u', '<C-\\><C-n>:resize +2<CR>i', { noremap = true })
+vim.keymap.set('t', '<C-w>i', '<C-\\><C-n>:resize -2<CR>i', { noremap = true })
+vim.keymap.set('t', '<C-w>o', '<C-\\><C-n>:vertical resize +2<CR>i', { noremap = true })
 ```
