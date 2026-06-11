@@ -37,22 +37,22 @@ vim.call('plug#end')
 Keybindings for both Normal mode and Terminal mode:
 | Bindings | Action |
 | :--- | :--- |
-| <kbd>Ctrl</kbd><kbd>Enter</kbd> | Toggle a persistent terminal split |
-| <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Enter</kbd> | Open a new terminal split |
+| <kbd>Ctrl</kbd>-<kbd>Enter</kbd> | Toggle a persistent terminal split |
+| <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>Enter</kbd> | Open a new terminal split |
 
 Keybindings for Terminal mode only:
 | Bindings | Action |
 | :--- | :--- |
-| <kbd>leader</kbd><kbd>ESC</kbd> | Enter Normal mode in a terminal split |
-| <kbd>leader</kbd><kbd>q</kbd> |  Delete the focused terminal buffer |
-| <kbd>Ctrl</kbd><kbd>h</kbd> | Focus the split on the left |
-| <kbd>Ctrl</kbd><kbd>j</kbd> | Focus the split below |
-| <kbd>Ctrl</kbd><kbd>k</kbd> | Focus the split above |
-| <kbd>Ctrl</kbd><kbd>l</kbd> | Focus the split on the right |
-| <<kbd>Ctrl</kbd>-<kbd>w</kbd>><kbd>y</kbd> | Decrease split width |
-| <<kbd>Ctrl</kbd>-<kbd>w</kbd>><kbd>u</kbd> | Increase split height |
-| <<kbd>Ctrl</kbd>-<kbd>w</kbd>><kbd>i</kbd> | Decrease split height |
-| <<kbd>Ctrl</kbd>-<kbd>w</kbd>><kbd>o</kbd> | Increase split width |
+| <kbd>leader</kbd> <kbd>ESC</kbd> | Enter Normal mode in a terminal split |
+| <kbd>leader</kbd> <kbd>q</kbd> |  Delete the focused terminal buffer |
+| <kbd>Ctrl</kbd>-<kbd>h</kbd> | Focus the split on the left |
+| <kbd>Ctrl</kbd>-<kbd>j</kbd> | Focus the split below |
+| <kbd>Ctrl</kbd>-<kbd>k</kbd> | Focus the split above |
+| <kbd>Ctrl</kbd>-<kbd>l</kbd> | Focus the split on the right |
+| <kbd>Ctrl</kbd>-<kbd>w</kbd> <kbd>y</kbd> | Decrease split width |
+| <kbd>Ctrl</kbd>-<kbd>w</kbd> <kbd>u</kbd> | Increase split height |
+| <kbd>Ctrl</kbd>-<kbd>w</kbd> <kbd>i</kbd> | Decrease split height |
+| <kbd>Ctrl</kbd>-<kbd>w</kbd> <kbd>o</kbd> | Increase split width |
 
 ## Configuration
 
