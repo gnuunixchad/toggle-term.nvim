@@ -45,7 +45,10 @@ Keybindings for Terminal mode only:
 | :--- | :--- |
 | <kbd>leader</kbd><kbd>ESC</kbd> | Enter Normal mode in a terminal split |
 | <kbd>leader</kbd><kbd>q</kbd> |  Delete the focused terminal buffer |
+| <kbd>Ctrl</kbd><kbd>h</kbd> | Focus the split on the left |
+| <kbd>Ctrl</kbd><kbd>j</kbd> | Focus the split below |
 | <kbd>Ctrl</kbd><kbd>k</kbd> | Focus the split above |
+| <kbd>Ctrl</kbd><kbd>l</kbd> | Focus the split on the right |
 | <<kbd>Ctrl</kbd>-<kbd>w</kbd>><kbd>y</kbd> | Decrease split width |
 | <<kbd>Ctrl</kbd>-<kbd>w</kbd>><kbd>u</kbd> | Increase split height |
 | <<kbd>Ctrl</kbd>-<kbd>w</kbd>><kbd>i</kbd> | Decrease split height |
@@ -70,11 +73,16 @@ vim.keymap.set('t', '<C-CR>', '<C-\\><C-n>:TermToggle<CR>', { silent = true })
 vim.keymap.set('n', '<C-S-CR>', ':TermNew<CR>', { silent = true })
 vim.keymap.set('t', '<C-S-CR>', '<C-\\><C-n>:TermNew<CR>', { silent = true })
 
--- escape terminal mode with vi mode shell
+-- unfocus and close terminal
 vim.keymap.set('t', '<leader><ESC>', '<C-\\><C-n>', { noremap = true })
 vim.keymap.set('t', '<leader>q', '<C-\\><C-n>:quit!<CR>', { noremap = true })
 vim.keymap.set('t', '<C-q>', '<C-\\><C-n>:quit!<CR>', { noremap = true })
+
+-- movement
+vim.keymap.set('t', '<C-h>', '<C-\\><C-n>:wincmd h<CR>', { noremap = true })
+vim.keymap.set('t', '<C-j>', '<C-\\><C-n>:wincmd j<CR>', { noremap = true })
 vim.keymap.set('t', '<C-k>', '<C-\\><C-n>:wincmd k<CR>', { noremap = true })
+vim.keymap.set('t', '<C-l>', '<C-\\><C-n>:wincmd l<CR>', { noremap = true })
 
 -- resize
 vim.keymap.set('t', '<C-w>y', '<C-\\><C-n>:vertical resize -2<CR>i', { noremap = true })
