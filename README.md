@@ -43,7 +43,7 @@ Keybindings for both Normal mode and Terminal mode:
 Keybindings for Terminal mode only:
 | Bindings | Action |
 | :--- | :--- |
-| <kbd>leader></kbd><kbd><ESC></kbd> | Enter Normal mode in a terminal split|
+| <kbd>leader</kbd><kbd>ESC</kbd> | Enter Normal mode in a terminal split |
 | <kbd>leader</kbd><kbd>q</kbd> |  Delete the focused terminal buffer |
 | <kbd>Ctrl</kbd><kbd>k</kbd> | Focus the split above |
 | <<kbd>Ctrl</kbd>-<kbd>w</kbd>><kbd>y</kbd> | Decrease split width |
