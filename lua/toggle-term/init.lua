@@ -5,7 +5,7 @@
 local M = {}
 
 M.config = {
-  height_ratio = 1/3,
+  ratio = 1/3,
   direction = 'bottom',
 }
 
@@ -48,7 +48,7 @@ function M.toggle_terminal_split()
   end
 
   local is_vertical = M.config.direction == 'left' or M.config.direction == 'right'
-  local size = is_vertical and math.floor(vim.o.columns * M.config.height_ratio) or math.floor(vim.o.lines * M.config.height_ratio)
+  local size = is_vertical and math.floor(vim.o.columns * M.config.ratio) or math.floor(vim.o.lines * M.config.ratio)
 
   if #term_bufs > 0 then
     vim.cmd(M.get_split_command() .. ' ' .. size .. 'split')
@@ -62,7 +62,7 @@ end
 
 function M.new_terminal_split()
   local is_vertical = M.config.direction == 'left' or M.config.direction == 'right'
-  local size = is_vertical and math.floor(vim.o.columns * M.config.height_ratio) or math.floor(vim.o.lines * M.config.height_ratio)
+  local size = is_vertical and math.floor(vim.o.columns * M.config.ratio) or math.floor(vim.o.lines * M.config.ratio)
   vim.cmd(M.get_split_command() .. ' ' .. size .. 'split | terminal')
   vim.cmd('startinsert')
 end

@@ -64,7 +64,7 @@ Keybindings for `Terminal` mode only:
 
 ```lua
 require('toggle-term').setup({
-  height_ratio = 1/3,       -- or a float number like 0.25
+  ratio = 1/3,       -- or a float number like 0.25
   direction = 'bottom',     -- or 'top', 'left', 'right'
 })
 ```
