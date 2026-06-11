@@ -4,13 +4,21 @@ A minimalist Neovim plugin to toggle and manage terminal splits.
 
 ## Features
 
-- <kbd>Ctrl</kbd><kbd>Enter</kbd> toggles a persistent terminal split with a
-  single keymap
-- <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Enter</kbd> creates new terminal splits on
-  demand
+- Toggle a persistent terminal buffer in a split
+- Create new terminal buffer in new split
+- Movement and resize for terinal split
 - Configurable split direction, ratio, and keybindings
 
 ## Installation
+
+### Manually
+```sh
+mkdir -p ${XDG_DATA_HOME}/nvim/site/pack/default/start/
+cd ${XDG_DATA_HOME}/nvim/site/pack/default/start/
+# clone from one of the mirrors
+git clone https://github.com/gnuunixchad/toggle-term.nvim
+git clone https://codeberg.org/unixchad/toggle-term.nvim
+```
 
 ### vim-plug
 ```lua
@@ -24,18 +32,36 @@ Plug('gnunixchad/toggle-term.nvim')
 vim.call('plug#end')
 ```
 
+## Keybindings
+
+Keybindings for both Normal mode and Terminal mode:
+| Bindings | Action |
+| :--- | :--- |
+| <kbd>Ctrl</kbd><kbd>Enter</kbd> | Toggle a persistent terminal split |
+| <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Enter</kbd> | Open a new terminal split |
+
+Keybindings for Terminal mode only:
+| Bindings | Action |
+| :--- | :--- |
+| <kbd>leader></kbd><kbd><ESC></kbd> | Enter Normal mode in a terminal split|
+| <kbd>leader</kbd><kbd>q</kbd> |  Delete the focused terminal buffer |
+| <kbd>Ctrl</kbd><kbd>k</kbd> | Focus the split above |
+| <<kbd>Ctrl</kbd>-<kbd>w</kbd>><kbd>y</kbd> | Decrease split width |
+| <<kbd>Ctrl</kbd>-<kbd>w</kbd>><kbd>u</kbd> | Increase split height |
+| <<kbd>Ctrl</kbd>-<kbd>w</kbd>><kbd>i</kbd> | Decrease split height |
+| <<kbd>Ctrl</kbd>-<kbd>w</kbd>><kbd>o</kbd> | Increase split width |
+
 ## Configuration
 
 ```lua
 require('toggle-term').setup({
-  height_ratio = 1/3,       -- 1/3 of the window height
-  direction = 'bottom',     -- open temrinal at bottom
+  height_ratio = 1/3,       -- 1/3 of the window height, or a float number
+  direction = 'bottom',     -- open temrinal at bottom, from 'top', 'bototm',
+                            -- 'left', 'right'
 })
 ```
 
-## Keybindings
-
-Here are the default keybindings:
+### Default Keybindings
 
 ```lua
 -- toggle and new terminal
