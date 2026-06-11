@@ -32,15 +32,21 @@ Plug('gnunixchad/toggle-term.nvim')
 vim.call('plug#end')
 ```
 
-## Keybindings
+## Usage
 
-Keybindings for both Normal mode and Terminal mode:
+### Commands
+- `:TermToggle` to toggle a persistent terminal split
+- `:TermNew` to Open a new terminal split
+
+### Keybindings
+
+Keybindings for both `Normal` and `Terminal` mode:
 | Bindings | Action |
 | :--- | :--- |
 | <kbd>Ctrl</kbd>-<kbd>Enter</kbd> | Toggle a persistent terminal split |
 | <kbd>Ctrl</kbd>-<kbd>Shift</kbd>-<kbd>Enter</kbd> | Open a new terminal split |
 
-Keybindings for Terminal mode only:
+Keybindings for `Terminal` mode only:
 | Bindings | Action |
 | :--- | :--- |
 | <kbd>leader</kbd> <kbd>ESC</kbd> | Enter Normal mode in a terminal split |
@@ -58,9 +64,8 @@ Keybindings for Terminal mode only:
 
 ```lua
 require('toggle-term').setup({
-  height_ratio = 1/3,       -- 1/3 of the window height, or a float number
-  direction = 'bottom',     -- open temrinal at bottom, from 'top', 'bototm',
-                            -- 'left', 'right'
+  height_ratio = 1/3,       -- or a float number like 0.25
+  direction = 'bottom',     -- or 'top', 'left', 'right'
 })
 ```
 
